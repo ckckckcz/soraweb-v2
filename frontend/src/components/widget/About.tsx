@@ -1,4 +1,17 @@
-import { Layers, Rocket, Users, Zap } from 'lucide-react';
+const techStack = [
+    { name: "Next.js", logo: "https://cdn.simpleicons.org/nextdotjs/000000" },
+    { name: "React", logo: "https://cdn.simpleicons.org/react/61DAFB" },
+    { name: "Astro", logo: "https://cdn.simpleicons.org/astro/BC52EE" },
+    { name: "Laravel", logo: "https://cdn.simpleicons.org/laravel/FF2D20" },
+    { name: "FastAPI", logo: "https://cdn.simpleicons.org/fastapi/009688" },
+    { name: "Express", logo: "https://cdn.simpleicons.org/express/000000" },
+    { name: "Flutter", logo: "https://cdn.simpleicons.org/flutter/02569B" },
+    { name: "React Native", logo: "https://cdn.simpleicons.org/react/61DAFB" },
+    { name: "TypeScript", logo: "https://cdn.simpleicons.org/typescript/3178C6" },
+    { name: "JavaScript", logo: "https://cdn.simpleicons.org/javascript/F7DF1E" },
+    { name: "Tailwind CSS", logo: "https://cdn.simpleicons.org/tailwindcss/06B6D4" },
+    { name: "Supabase", logo: "https://cdn.simpleicons.org/supabase/3ECF8E" },
+];
 
 export const About = () => {
     return (
@@ -41,29 +54,29 @@ export const About = () => {
                     </div>
                 </div>
 
-                {/* Bottom: Logos / Trust Indicators */}
-                <div className="w-full">
-                    <p className="text-center text-slate-400 text-sm font-semibold uppercase tracking-widest mb-8">Trusted by industry leaders</p>
-                    <div className="flex flex-wrap items-center justify-center md:justify-between gap-8 md:gap-12 opacity-60 grayscale hover:grayscale-0 transition-all duration-500">
-                        <div className="flex items-center gap-2 text-xl font-bold text-slate-800">
-                            <div className="w-8 h-8 bg-slate-800 rounded-full flex items-center justify-center text-white"><Zap size={16} /></div>
-                            <span>BoltShift</span>
-                        </div>
-                        <div className="flex items-center gap-2 text-xl font-bold text-slate-800">
-                            <div className="w-8 h-8 border-2 border-slate-800 rounded flex items-center justify-center"><Layers size={16} /></div>
-                            <span>Layers</span>
-                        </div>
-                        <div className="flex items-center gap-2 text-xl font-bold text-slate-800">
-                            <div className="w-8 h-8 bg-slate-800 rounded-tr-xl rounded-bl-xl flex items-center justify-center text-white"><Rocket size={16} /></div>
-                            <span>RocketUp</span>
-                        </div>
-                        <div className="flex items-center gap-2 text-xl font-bold text-slate-800">
-                            <div className="w-8 h-8 border-2 border-slate-800 rounded-full flex items-center justify-center"><Users size={16} /></div>
-                            <span>Crowd</span>
-                        </div>
-                        <div className="flex items-center gap-2 text-xl font-bold text-slate-800">
-                            <div className="w-8 h-8 bg-blue-700 rounded-full flex items-center justify-center text-white font-serif">S</div>
-                            <span>Soraweb</span>
+                {/* Bottom: Tech Stack Carousel */}
+                <div className="w-full mt-20">
+                    <p className="text-center text-slate-400 text-sm font-semibold uppercase tracking-widest mb-10">Tech yang kami gunakan</p>
+
+                    <div className="relative w-full overflow-hidden">
+                        {/* Gradient Masks for smooth fade out at edges */}
+                        <div className="absolute left-0 top-0 bottom-0 w-20 bg-gradient-to-r from-white to-transparent z-10"></div>
+                        <div className="absolute right-0 top-0 bottom-0 w-20 bg-gradient-to-l from-white to-transparent z-10"></div>
+
+                        <div className="flex gap-16 w-max animate-infinite-scroll hover:pause py-4 items-center">
+                            {[...techStack, ...techStack, ...techStack].map((tech, index) => (
+                                <div
+                                    key={index}
+                                    className="group flex flex-col items-center gap-3 cursor-pointer"
+                                >
+                                    <img
+                                        src={tech.logo}
+                                        alt={tech.name}
+                                        className="h-10 md:h-12 w-auto object-contain grayscale opacity-60 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-300 transform group-hover:scale-110"
+                                    />
+                                    {/* Optional: Show name on hover if desired, but sticking to logos for now as requested */}
+                                </div>
+                            ))}
                         </div>
                     </div>
                 </div>

@@ -56,8 +56,8 @@ export const Footer = () => {
                         <div className="md:col-span-3 text-left md:text-right space-y-4 order-3">
                             <h3 className="text-sm uppercase tracking-widest text-slate-400 font-semibold mb-4">Visit Us</h3>
                             <p className="text-lg text-slate-300 leading-relaxed">
-                                Jalan Raya Kreatif No. 88,<br />
-                                Jakarta Selatan, ID 12345
+                                Politeknik Negeri Malang<br />
+                                Indonesia, Jawa Timur
                             </p>
                         </div>
                     </div>
