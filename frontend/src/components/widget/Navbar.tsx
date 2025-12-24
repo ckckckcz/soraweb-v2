@@ -4,7 +4,7 @@ export const Navbar = () => {
 
     return (
         <div className="fixed -top-6 left-0 right-0 z-50 p-4 md:p-6">
-            <nav className="relative bg-white/80 backdrop-blur-md rounded-b-3xl px-8 py-4 flex items-center justify-between shadow-sm max-w-7xl mx-auto border border-white/20">
+            <nav className="relative bg-white/80 backdrop-blur-md rounded-b-3xl px-8 py-4 flex items-center justify-between max-w-7xl mx-auto border border-white/20">
                 {/* Left: Tagline */}
                 <div className="hidden md:flex items-center">
                     <span className="text-sm font-semibold text-blue-700 tracking-wide">With Sora, we build together.</span>

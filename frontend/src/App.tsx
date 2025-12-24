@@ -1,12 +1,15 @@
-import { Figma, Github, CornerRightDown } from 'lucide-react';
+import { Figma, Github } from 'lucide-react';
 import { Navbar } from '@/components/widget/Navbar';
+import { About } from '@/components/widget/About';
+import { Footer } from '@/components/widget/Footer';
+import { Team } from '@/components/widget/Team';
 import { Button } from './components/ui/button';
 
 export default function App() {
   return (
-    <div className="min-h-screen relative overflow-hidden font-sans">
+    <div className="min-h-screen relative overflow-x-hidden font-sans">
       <div
-        className="absolute inset-0 z-0 bg-cover bg-center bg-no-repeat"
+        className="fixed inset-0 z-0 bg-cover bg-center bg-no-repeat"
         style={{ backgroundImage: "url('/background.png')" }}
       >
         <div className="absolute inset-0 bg-white/40 backdrop-blur-[1px]"></div>
@@ -72,7 +75,9 @@ export default function App() {
         </div>
 
       </div>
-
+      <About />
+      <Team />
+      <Footer />
       <div className="fixed top-20 left-20 w-64 h-64 bg-yellow-200/30 rounded-full blur-3xl -z-10 mix-blend-multiply pointer-events-none animate-pulse-slow"></div>
       <div className="fixed bottom-20 right-20 w-80 h-80 bg-orange-200/30 rounded-full blur-3xl -z-10 mix-blend-multiply pointer-events-none animate-pulse-slow delay-75"></div>
     </div>
